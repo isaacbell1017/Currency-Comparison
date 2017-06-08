@@ -14,8 +14,8 @@ RSpec.describe EthereumPriceIndex, type: :model do
   context "when Etherchain API can't be reached" do
     before(:each) do
       # TODO: Stub out error response
-      stub_request(:any, /etherchain.org/).
-        to_return(body: File.read(File.join('spec','fixtures', 'fake_coindesk_error_response.html')))
+      # stub_request(:any, /etherchain.org/).
+        # to_return(body: File.read(File.join('spec','fixtures', 'fake_etherchain_error.html')))
     end
     describe "#get_monthly_historical_range" do
       it "should return an error message " do

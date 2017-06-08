@@ -74,6 +74,10 @@ GEM
       safe_yaml (~> 1.0.0)
     database_cleaner (1.6.1)
     diff-lcs (1.3)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubi (1.6.0)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -300,6 +304,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   database_cleaner
+  dotenv-rails
   factory_girl_rails
   faker
   foundation-rails (~> 6.3.0)
