@@ -5,13 +5,14 @@
     %title= content_for?(:title) ? yield(:title) : 'Workspace'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Workspace'}"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
-    -# Modernizr is required for Zurb Foundation
-    = javascript_include_tag 'vendor/modernizr'
+    %script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    %script{:src => "http://code.highcharts.com/highcharts.js"}
+    / 2. You can add print and export feature by adding this line
+    %script{:src => "http://code.highcharts.com/modules/exporting.js"}
     = csrf_meta_tags
   %body
     %header
-      = render 'layouts/navigation'
+      = render 'layouts/header'
     %main{:role => "main"}
-      = render 'layouts/messages'
       = yield
