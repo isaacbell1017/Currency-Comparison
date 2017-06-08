@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'httparty'
 
 RSpec.describe BitcoinPriceIndex, type: :model do
   let (:btcpi) { BitcoinPriceIndex.new }
