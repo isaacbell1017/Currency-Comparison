@@ -8,7 +8,7 @@ class EthereumPriceIndex
     response = get(url)
     
     # Convert JSON response containing an array of hashes to a single hash
-    return JSON.parse(response.body)['data'].reduce({}, :merge)
+    return JSON.parse(response.body)['data'].collect(&:values)
     
     rescue JSON::ParserError => e
       return 'An error was encountered through the Etherchain API. Please try again in a few minutes.'

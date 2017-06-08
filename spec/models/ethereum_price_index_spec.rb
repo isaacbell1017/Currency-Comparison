@@ -6,8 +6,9 @@ RSpec.describe EthereumPriceIndex, type: :model do
       stub_request(:any, /etherchain.org/).
         to_return(body: File.read(File.join('spec','fixtures', 'fake_etherchain_api_response.json')))
       
-      expect(EthereumPriceIndex.get_price_history).to be_a(Hash)
-      expect(EthereumPriceIndex.get_price_history.first[0]).to eq('time')
+      expect(EthereumPriceIndex.get_price_history).to be_a(Array)
+      expect(EthereumPriceIndex.get_price_history.first[0]).to be_a(String)
+      expect(EthereumPriceIndex.get_price_history.first[1]).to be_a(Float)
     end
   end
   
