@@ -11,18 +11,4 @@ RSpec.describe NasdaqGlobalIndex, type: :model do
       expect(NasdaqGlobalIndex.get_index.first[1]).to be_a(Float)
     end
   end
-  
-  context "when Quandal API can't be reached" do
-    before(:each) do
-      # TODO: Stub out error response
-    #   stub_request(:any, /quandl.com/).
-        # to_return(body: File.read(File.join('spec','fixtures', 'fake_quandal_error_response.html')))
-    end
-    describe "#get_monthly_historical_range" do
-      it "should return an error message " do
-          
-        skip 'Need failure example'
-      end
-    end
-  end
 end

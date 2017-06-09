@@ -1,17 +1,15 @@
 require 'spec_helper'
 
 feature "User checks Bitcoin index" do
+  # Note: The test boundary for this demo is the data that is passed 
+  # to Highchart; there's no point in testing Highchart's rendering/graphing
   scenario "Visitor checks Bitcoin value over the last month" do
-    visit "/"
-    # Expect Highcharts to display
-    expect(page).to have_content(31.days.ago.strftime("%Y-%m-%d"))
-    expect(page).to have_content('Or, input a custom date range')
-  end
-  
-  scenario "Visitor inputs custom date range" do
-    visit "/"
-    fill_in 'Start Date', with: 7.days.ago
-    fill_in 'End Date', with: 1.day.ago
-    click_button 'Search by date range'
+    # As a visitor
+    # I want to see the historical values of Bitcoin, Ethereum, and the NASDAQ charted out
+    # So that I can compare and make more informed financial decisions
+    
+    visit root_path
+    expect(page).to have_content("Currency Comparison Tool")
+    expect(page).to have_content('Compare Bitcoin, Ethereum, and NASDAQ historical values')
   end
 end
