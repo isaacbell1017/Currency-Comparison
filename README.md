@@ -7,8 +7,6 @@ I considered Highcharts' rendering and graphing to be outside the scope of the a
 
 This application uses Sass. While I did not have need for it here, I generally adhere to the [SMACSS Architecture](https://smacss.com/) for how I approach my CSS code.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
 APIs Used:
 ==========
 
