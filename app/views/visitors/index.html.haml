@@ -1,6 +1,16 @@
 .row
   .columns
-    #chart{:style => "width: 600px; height: 400px; margin: 0 auto"}
+    #chart{:style => "width: 600px; height: 600px; margin: 0 auto"}
+.row
+  .columns
+    %p.float-left Credit - Isaac Bell
+    %ul.menu.align-center.float-right
+      %li
+        %a{:href => "github.com/IsaacBell/"} Github
+      %li
+        %a{:href => "linkedin.com/in/bellisaac"} Linkedin
+      %li
+        %a{:href => ""} Link
     
 :javascript 
   $(document).ready(function(){
@@ -8,7 +18,6 @@
       yAxis: {
         minPadding: 0.05,
         maxPadding: 0.05,
-        categories: ['Bitcoin', 'Ethereum', 'NASDAQ']
       },
       xAxis: {
         type: 'datetime',
@@ -26,14 +35,14 @@
         text: 'Currency Comparison Tool'
       },
       subtitle: {
-        text: 'Compare Bitcoin, Ethereum, and NASDAQ'
+        text: 'Compare Bitcoin, Ethereum, and NASDAQ historical values'
       },
-      series: [{
-    		color: Highcharts.getOptions().colors[2]}
+      series: [
+        { name: 'Bitcoin', data: #{ bitcoin_data_by_date(@btc_data)} },
+        { name: 'Ethereum', data: #{ ethereum_data(@eth_data)} },
+        { name: 'NASDAQ', data: #{ nasdaq_data(@nasdaq_data)} }
     	]
     }
-    
-    options.series[0] = { name: 'Bitcoin', data: #{ bitcoin_data_by_date(@btc_data)} }
     
     chart = new Highcharts.Chart(options);
   })
