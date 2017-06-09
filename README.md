@@ -1,14 +1,20 @@
-Workspace
+Currency Comparison Tool
 ================
+
+This demo web app was written using Rails 5, Haml, [Highcharts](http://www.highcharts.com/), and [Foundation 6](http://foundation.zurb.com/index.html).
+
+I considered Highcharts' rendering and graphing to be outside the scope of the application's test suite.
+
+This application uses Sass. While I did not have need for it here, I generally adhere to the [SMACSS Architecture](https://smacss.com/) for how I approach my CSS code.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 APIs Used:
 ==========
 
-* [http://www.coindesk.com/api/](BTC)
-* [https://www.blockcypher.com/dev/ethereum/#introduction](ETH)
-* [https://github.com/herval/yahoo-finance](NASDAQ)
+* [http://www.coindesk.com/api/](BTC: Coindesk)
+* [https://www.blockcypher.com/dev/ethereum/#introduction](ETH: BlockCypher)
+* [https://www.quandl.com/](NASDAQ: Quandl)
 
 Ruby on Rails
 -------------
