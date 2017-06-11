@@ -51,4 +51,5 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'webmock'
+  gem 'rails-controller-testing'
 end

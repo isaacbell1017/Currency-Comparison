@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe BitcoinPriceIndex, type: :model do
-  let (:btcpi) { BitcoinPriceIndex.new }
-  
   describe "#get_monthly_historical_range" do
     it "should make http request to Coindesk API service" do
       stub_request(:any, /api.coindesk.com/).
