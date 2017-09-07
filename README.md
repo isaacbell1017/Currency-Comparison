@@ -10,9 +10,9 @@ This application uses Sass. While I did not have need for it here, I generally a
 APIs Used:
 ==========
 
-* [http://www.coindesk.com/api/](BTC: Coindesk)
-* [https://www.blockcypher.com/dev/ethereum/#introduction](ETH: BlockCypher)
-* [https://www.quandl.com/](NASDAQ: Quandl)
+* [Coindesk](http://www.coindesk.com/api/)
+* [BlockCypher](https://www.blockcypher.com/dev/ethereum/#introduction)
+* [Quandl](https://www.quandl.com/)
 
 Ruby on Rails
 -------------
